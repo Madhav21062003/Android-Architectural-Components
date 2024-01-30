@@ -1,0 +1,44 @@
+
+
+Lifecycle observers are a key part of the Android Jetpack
+Lifecycle Architecture introduced around Google I/O 2018. They simplify and improve
+how components react to the different states of an activity or fragment's lifecycle.
+
+What are lifecycle observers?
+
+A-1:
+(a) They are classes that "observe" the lifecycle of another component
+    (typically an activity or fragment), which implements the LifecycleOwner interface.
+
+(b) They react to changes in the lifecycle by implementing and
+    overriding methods corresponding to different lifecycle events
+    like onCreate, onStart, onResume, etc.
+
+
+ Why do we use lifecycle observers?
+
+ (a)Reduced boilerplate code: Instead of scattering lifecycle-related code within the
+  lifecycle methods of activities/fragments, you can move it to dedicated observer classes.
+    This makes the code cleaner, more organized, and easier to maintain.
+
+ (b)Improved memory management: Observers automatically get registered and
+    unregistered based on the lifecycle of the owner,preventing memory
+    leaks caused by forgetting to unregister observers manually.
+
+ (c) Simplified lifecycle handling: You can focus on specific lifecycle events
+    you care about in your observer, without having to deal  with all events in the
+    owner's lifecycle methods.
+
+ (d) Decoupling components: Observers decouple your logic from the owner's lifecycle,
+     making them more reusable and easier to test.
+
+
+Here are some additional points to consider:
+There are two main approaches for implementing lifecycle observers:
+
+DefaultLifecycleObserver: provides default implementations for all lifecycle methods,
+                           allowing you to override only the ones you need.
+
+LifecycleEventObserver: offers finer-grained control over individual lifecycle events.
+
+Always remember to register and unregister observers properly to avoid memory leaks.
