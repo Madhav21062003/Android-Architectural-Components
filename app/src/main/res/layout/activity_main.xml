@@ -10,11 +10,11 @@
         android:id="@+id/countValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="224dp"
+        android:layout_marginTop="64dp"
         android:text="0"
-        android:textStyle="bold"
         android:textColor="@color/black"
         android:textSize="35sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,11 +24,32 @@
         android:id="@+id/countButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="16dp"
         android:onClick="increment"
         android:text="Count"
         app:layout_constraintEnd_toEndOf="@+id/countValue"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="@+id/countValue"
         app:layout_constraintTop_toBottomOf="@+id/countValue" />
+
+    <TextView
+        android:id="@+id/tvFact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countButton" />
+
+    <Button
+        android:id="@+id/btnFact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Fact Btn"
+        app:layout_constraintEnd_toEndOf="@+id/tvFact"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="@+id/tvFact"
+        app:layout_constraintTop_toBottomOf="@+id/tvFact" />
 </androidx.constraintlayout.widget.ConstraintLayout>
