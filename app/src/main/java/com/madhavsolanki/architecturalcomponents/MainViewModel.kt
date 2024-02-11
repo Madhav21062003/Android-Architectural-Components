@@ -2,9 +2,9 @@ package com.madhavsolanki.architecturalcomponents
 
 import androidx.lifecycle.ViewModel
 
-class MainViewModel: ViewModel() {
+class MainViewModel(val initialValue:Int): ViewModel() {
 
-    var count:Int = 0
+    var count:Int = initialValue
 
     fun increment() {
         count ++

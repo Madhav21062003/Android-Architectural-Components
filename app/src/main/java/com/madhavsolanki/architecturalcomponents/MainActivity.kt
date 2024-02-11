@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         countValue = findViewById(R.id.countValue)
 
 
-        mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        mainViewModel = ViewModelProvider(this, MainViewModelFactory(10)).get(MainViewModel::class.java)
         setText()
     }
 
